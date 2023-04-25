@@ -33,7 +33,7 @@ def predict():
         # clf = joblib.load("./Housing_price_model/StochasticGradientDescent.joblib")
         clf = joblib.load("./Housing_price_model/GradientBoostingRegressor.joblib")
     except Exception as e:
-    print(f"An error occurred: {e}")
+    print("An error occurred: {e}")
 
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
