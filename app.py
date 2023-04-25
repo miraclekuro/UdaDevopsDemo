@@ -20,7 +20,7 @@ def scale(payload):
 
 @app.route("/")
 def home():
-    html = "<h3>Sklearn Prediction Home</h3>"
+    html = "<h3>Sklearn Prediction Home test</h3>"
     return html.format(format)
 
 # TO DO:  Log out the prediction value
@@ -32,8 +32,7 @@ def predict():
         # clf = joblib.load("./Housing_price_model/LinearRegression.joblib")
         # clf = joblib.load("./Housing_price_model/StochasticGradientDescent.joblib")
         clf = joblib.load("./Housing_price_model/GradientBoostingRegressor.joblib")
-    except Exception as e:
-        print(f"An error occurred: {e}")
+    except:
         LOG.info("JSON payload: %s json_payload")
         return "Model not loaded"
 
